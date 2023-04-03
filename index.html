@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyser Music !</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="Background">
+        <div class="navbar">
+            <img src="logo.png" alt="logo Web" class="logo">
+            <ul>
+                <li><a href="#">Acceuil</a></li>
+                <li><a href="#">PlayList</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Profil</a></li>
+                <li><a href="#">A Propos</a></li>
+            </ul>
+        </div>
+        <div class="contenus">
+            <div class="col-gauche">
+                <h1>Ma <br> Playlist <br> Matinale</h1>
+            </div>
+            <div class="col-droite">
+                <p>Jouer la Musique</p>
+                <img src="play.png" alt="" id="btn_play">
+            </div>
+        </div>
+    </div>
+    <audio id="MaMusic">
+        <source src="Thousand Foot Krutch-Courtesy Call (Lyrics Video).mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        var MaMusic = document.getElementById("MaMusic")
+        var btn_play = document.getElementById("btn_play")
+
+        btn_play.onclick = function(){
+            if(MaMusic.paused){
+                MaMusic.play();
+                btn_play.src = "pause.png"
+            }else{
+                MaMusic.pause();
+                btn_play.src = "play.png"
+            }
+        }
+    </script>
+</body>
+</html>
